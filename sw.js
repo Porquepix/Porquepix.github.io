@@ -1,14 +1,17 @@
+var CACHE_NAME = 'alexis-andrieu';
+var URL_TO_CACHE = [
+    '/',
+    'index.html',
+    'app.css',
+    'app.js',
+    'sw.js',
+    'logo.png'
+];
+
 self.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open('alexis-andrieu').then(function(cache) {
-            return cache.addAll([
-                '/',
-                'index.html',
-                'app.css',
-                'app.js',
-                'sw.js',
-                'logo.png'
-            ]);
+        caches.open(CACHE_NAME).then(function(cache) {
+            return cache.addAll(URL_TO_CACHE);
         })
     );
 });
@@ -16,7 +19,8 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request).then(function(response) {
-            return response || fetch(event.request);
+            return fetch(event.request);
+            // return response || fetch(event.request);
         })
     );
 });
