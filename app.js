@@ -1,9 +1,9 @@
 'use strict';
 
 // Register the service worker
-if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker) {
     console.log('Service Worker is supported');
-    navigator.serviceWorker.register('sw.js').then(function(reg) {
+    navigator.serviceWorker.register('/sw.js').then(function(reg) {
         reg.onupdatefound = function () {
             displayMessageOnInstall(reg);
         }
