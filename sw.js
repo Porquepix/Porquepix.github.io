@@ -22,11 +22,8 @@ self.addEventListener('fetch', function(event) {
             return cache.match(event.request);
         })
         .then(function(response) {
-            console.log(event.request.url);
-            if (response) {
-                console.log("true")
-            }
-            return response || fetch(event.request);
+            if (response) return response;
+            return fetch(event.request);
         })
     );
 });
