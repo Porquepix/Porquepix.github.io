@@ -23,6 +23,7 @@ self.addEventListener('fetch', function(event) {
         })
         .then(function(response) {
             if (response) return response;
+            console.log(event.request.url)
             return fetch(event.request);
         })
     );
