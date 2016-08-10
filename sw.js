@@ -22,8 +22,10 @@ self.addEventListener('fetch', function(event) {
             return cache.match(event.request);
         })
         .then(function(response) {
-            console.log(event.request);
-            console.log(response);
+            console.log(event.request.url);
+            if (response) {
+                console.log("true")
+            }
             return response || fetch(event.request);
         })
     );
