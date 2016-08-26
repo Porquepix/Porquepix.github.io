@@ -1,32 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Personal website of a french IT Engineer Student : Alexis Andrieu." />
-    <title>Alexis Andrieu - IT Engineer Student</title>
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="app.css">
-    <link rel="icon" href="favicon.ico" />
-  </head>
-  <body>
-    <div class="outter-container">
-      <div class="inner-container">
-        <img class="logo" src="logo.png" alt="Logo: two A in a circle">
-        <p>Hello! My name is <strong>Alexis Andrieu</strong>, I'm an <i>engineer student</i><br> in <i>computer science</i> and <i>management</i>.</p>
-        <p>I'm <strong>French</strong> and I live in Montpellier, a town in south of France.</p>
-        <p class="contact">You can contact me at <a href="mailto:contact@alexis-andrieu.fr">contact@alexis-andrieu.fr</a></p>
-        <ul class="social">
-          <li><a href="#soon">Curriculum vitae</a></li>
-          <li><a href="https://www.linkedin.com/in/alexis-andrieu-3b7728ba" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/Porquepix" target="_blank">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="sw-installed">
-      Caching done. You can now see this site offline.
-    </div>
-    <script src="app.js"></script>
-  </body>
+    <head>
+        <meta charset="utf8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Alexis 'Porquepix' Andrieu">
+        <meta name="description" content="Personal website of a french IT Engineer Student : Alexis Andrieu.">
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="#689F38">
+
+        <link rel="icon" type="image/jpg" href="./static/face.jpg" />
+        <title>Alexis Andrieu - IT Engineer Student</title>
+
+        <!-- Styles -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
+        <link href="./static/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <!-- Main header & Nav -->
+        <header class="main-header gradient--before">
+            <div class="container">
+                <div class="main-header__logo">
+                    <div class="logo__img">
+                        <img alt="" class="logo__img--default" src="./static/face.jpg">
+                        <img alt="" class="logo__img--hover" src="./static/face-hover.jpg">
+                    </div>
+                    <div class="logo__wrapper">
+                        <h1 class="logo__title">
+                            <span class="title__name">A</span>lexis 
+                            <span class="title__surname">A</span>ndrieu
+                        </h1>
+                        <h2 class="logo__subtitle">Engineer Student in Computer Science</h2>
+                    </div>
+                </div>
+                <nav class="main-header__nav">
+                    <ul class="nav__links">
+                        <li><a class="nav__link nav__link--active" href="/">Home</a></li>
+                        <li><a class="nav__link" href="https://www.linkedin.com/in/alexis-andrieu-3b7728ba" target="_blank" rel="noopener">About</a></li>
+                        <li><a class="nav__link" href="https://github.com/Porquepix" target="_blank" rel="noopener">Lab</a></li>
+                        <li><a class="nav__link" href="mailto:contact@alexis-andrieu.com">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Presentation -->
+        <section class="presentation">
+            <header class="title gradient--after gradient--xs">
+                <div class="container">
+                    <h2 class="title__content">Home</h2>
+                    <div class="title__sub-content source-code">
+                        <p>
+                            <span class="variable">console</span>.<span class="function">log</span>('Welkome !');
+                        </p>
+                        <p>
+                            <span class="function">fetch</span>('./data.json').<span class="function">then</span>(<span class="keyword">function</span> (<span class="variable">response</span>) {
+                            <span class="keyword">return</span> <span class="variable">reponse</span>.<span class="function">json</span>();})
+                        </p>
+                        <p>
+                            .<span class="function">then</span>(<span class="keyword">function</span> (<span class="variable">json</span>) {<span class="variable">console</span>.<span class="function">log</span>(<span class="variable">json</span>.<span class="variable">message</span>)})
+                        </p>
+                        <p>
+                            .<span class="function">catch</span>(<span class="keyword">function</span> (<span class="variable">error</span>) {<span class="function">alert</span>('Error when fetching !'); });
+                        </p>
+                    </div>
+                </h3>
+            </header>
+
+            <div class="presentation__tab-list">
+                <div class="container">
+                    <div class="tab-list__tab">
+                        message.txt
+                        <i class="fa fa-close close-icon" aria-hidden="true"></i>      
+                    </div>
+                </div>
+            </div>
+
+            <main class="presentation__content">
+                <div class="container">
+                    <p>
+                        Hello!
+                    </p>
+                    <p>
+                        My name is <strong class="highlight">Alexis Andrieu</strong>, I'm an <i>engineer student</i> in <i>computer science</i> and <i>management</i>.
+                    </p>
+                    <p>
+                        I'm <strong class="highlight">French</strong> and I live in Montpellier, a town in south of France. 
+                        <span class="presentation__write-bar"></span>
+                    </p>                
+                </div>
+            </main>
+
+            <footer class="presentation__footer">
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i> Fork me on GitHub !</a>
+            </footer>
+
+        </section> <!-- /Presentation -->
+
+        <!-- Soon -->
+        <section class="soon">
+            <header class="soon__header gradient--before gradient--after"></header>
+            <div class="soon__content">
+                <p>More to come soon...</p>
+            </div>
+        </section>
+
+        <!-- Main footer -->
+        <footer class="main-footer gradient--after"></footer>
+
+        <!-- Scripts -->
+        <script deffer src="./sw.js"></script>
+        <script deffer src="./static/app.js"></script>
+
+    </body>
 </html>
