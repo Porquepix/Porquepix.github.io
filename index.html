@@ -57,13 +57,13 @@
                         </p>
                         <p>
                             <span class="function">fetch</span>('./data.json').<span class="function">then</span>(<span class="keyword">function</span> (<span class="variable">response</span>) {
-                            <span class="keyword">return</span> <span class="variable">reponse</span>.<span class="function">json</span>();})
+                            <span class="keyword">return</span> <span class="variable">response</span>.<span class="function">json</span>();})
                         </p>
                         <p>
                             .<span class="function">then</span>(<span class="keyword">function</span> (<span class="variable">json</span>) {<span class="variable">console</span>.<span class="function">log</span>(<span class="variable">json</span>.<span class="variable">message</span>)})
                         </p>
                         <p>
-                            .<span class="function">catch</span>(<span class="keyword">function</span> (<span class="variable">error</span>) {<span class="function">alert</span>('Error when fetching !'); });
+                            .<span class="function">catch</span>(<span class="keyword">function</span> (<span class="variable">error</span>) { <span class="variable">console</span>.<span class="function">log</span>('Error: ', <span class="variable">error</span>); });
                         </p>
                     </div>
                 </h3>
